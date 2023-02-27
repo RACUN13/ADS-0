@@ -2,14 +2,16 @@
 
 using namespace std;
 
-int main(void) {
-    int a, b, c;
-    cin >> a >> b;
-    while(b != 0) {
-        c = a % b;
-        a = b;
-        b = c;
-    }
+int gcd(int a, int b) {
+  int c;
+  while (b != 0) {
+    c = a % b;
+    a = b;
+    b = c;
+  }
+return a;
+}
 
-cout << a;
+int main() {
+  cout << gcd(40, 60) << endl;
 }
